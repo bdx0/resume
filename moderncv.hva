@@ -1,0 +1,179 @@
+%% start of file `moderncv.hva'.
+%% Copyright 2012 Andrew Mahone (andrew.mahone@gmail.com).
+%% Implements a subset of moderncv (blue color, one style) for HTML or
+%% plaintext (markdown-compatible) output with HeVeA
+%% inherit article style
+\input{article.hva}
+%
+%% define \plaintext to use plaintext variants
+%% markdown-compatible section headers
+\newcounter{txtsection}
+\newcounter{txtsubsection}
+\renewcommand\thetxtsection{}%
+\renewcommand\thetxtsubsection{}%
+\@makesection
+  {\txtsection}{0}{txtsection}
+  {\@forcenewline\@open{head}{=}}
+  {\thetxtsection}{\quad}
+  {\@forcenewline\@close{head}}
+\@makesection
+  {\txtsubsection}{0}{txtsubsection}
+  {\@forcenewline\@open{head}{-}~}
+  {\thetxtsubsection}{\quad}
+  {\@forcenewline\@close{head}}
+\newcommand{\odiv}[1]{\ifhtml\@open{div}{#1}\fi}
+\newcommand{\cdiv}{\ifhtml\@close{div}\fi}
+\newcommand{\fdiv}{\ifhtml\@force{div}\fi}
+\newcommand{\ospan}[1]{\ifhtml\@open{span}{#1}\fi}
+\newcommand{\cspan}{\ifhtml\@close{span}\fi}
+\newcommand{\fspan}{\ifhtml\@force{span}\fi}
+\let\origsection\section
+\let\origsubsection\subsection
+\renewcommand{\section}[1]{\ifhtml\origsection{#1}\else\txtsection{#1}\fi}
+\renewcommand{\subsection}[1]{\ifhtml\origsubsection{#1}\else\txtsubsection{#1}\fi}
+%% numberless section headers, with decorative divs in html
+\renewcommand{\thesection}{\ospan{class="lbox2"} \fspan}
+\renewcommand{\thesubsection}{\ospan{class="lbox3"} \fspan}
+\usepackage{hevea}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{color}
+%% colors from moderncvstyleblue.sty, color3 is color1!75 since xcolor is not available
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{rgb}{0.22,0.45,0.70}% light blue
+\definecolor{color2}{rgb}{0.45,0.45,0.45}% dark grey
+\definecolor{color3}{rgb}{0.42,0.59,0.78}
+\renewcommand{\quad}{}
+\newcommand*{\firstname}[1]{\def\@firstname{#1}}
+\newcommand*{\familyname}[1]{\def\@familyname{#1}}
+\renewcommand*{\title}[1]{\def\@title{\@firstname~\@familyname~-~#1}}
+\newcommand*{\address}[2]{\def\@addressstreet{#1}\def\@addresscity{#2}}
+\newcommand*{\mobile}[1]{\def\@mobile{#1}}
+\newcommand*{\phone}[1]{\def\@phone{#1}}
+\newcommand*{\fax}[1]{\def\@fax{#1}}
+\newcommand*{\email}[1]{\def\@email{#1}}
+\newcommand*{\homepage}[1]{\def\@homepage{#1}}
+%% plaintext versions simply output the address (not URI)
+\newcommand*{\httplink}[2][]{%
+  \ifhtml%
+    \ifthenelse{\equal{#1}{}}%
+      {\href{http://#2}{#2}}%
+      {\href{http://#2}{#1}}%
+  \else%
+    #2%
+  \fi%
+}%
+\newcommand*{\emaillink}[2][]{%
+  \ifhtml%
+    \ifthenelse{\equal{#1}{}}%
+      {\href{mailto:#2}{#2}}%
+      {\href{mailto:#2}{#1}}%
+  \else%
+    #2%
+  \fi%
+}%
+%% plaintext variants use a simple item: label
+\newcommand{\mobilesymbol}{%
+  \ifhtml%
+    \@print@u{9990}~%
+  \else%
+    mobile:~%
+  \fi%
+}%
+\newcommand{\emailsymbol}{%
+  \ifhtml%
+    \@print@u{9993}~%
+  \else%
+    email:~%
+  \fi%
+}%
+%% plaintext "LaTeX", HTML is styled to resemble LaTeX logo
+\renewcommand{\LaTeX}{%
+  \ifhtml%
+    \ospan{class="latex"}L\@open{sup}{}A\@close{sup}T\@open{sub}{}E\@close{sub}\cspan{X}%
+  \else%
+    LaTeX%
+  \fi%
+}%
+%% uncomment to use marvosym mobile and letter symbols
+%\RequirePackage{marvosym}
+%\renewcommand{\emailsymbol}{\begin{toimage}\Letter\end{toimage}{\imageflush}}
+%\renewcommand{\mobilesymbol}{\begin{toimage}\Mobilefone\end{toimage}{\imageflush}}
+%% mimics the casual-style moderncv entry header
+\newcommand*{\cventry}[7][.25em]{%
+  \ifhtml%
+    \odiv{class="cventry"}%
+  \else%
+    \\%
+  \fi%
+  {\bfseries#2~~#3}%
+  \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
+  \ifthenelse{\equal{#5}{}}{}{, #5}%
+  \ifthenelse{\equal{#6}{}}{}{, #6}%
+  \ifhtml%
+    \ifthenelse{\equal{#7}{}}{}{\\#7}\cdiv%
+  \else%
+    \ifthenelse{\equal{#7}{}}{}{\\#7\par}%
+  \fi%
+}%
+% commands
+%% one header item per line in plaintext
+\newcommand*{\maketitlesymbol}{%
+  \ifhtml%
+    ~~~\textbullet~~~%
+  \else%
+    \\%
+  \fi%
+}% \textbullet forces the use of the CMSY font, even when latin modern fonts are used :(
+%   internal command to add an element to the header
+%   it collects the elements in a temporary box, and checks when to flush the box
+\newlength{\maketitlewidth}%
+\newlength{\maketitleboxwidth}%
+\newif\ifheaderstart
+\newcommand*{\addtomaketitle}[2][\maketitlesymbol]{%
+  \ifheaderstart%
+    #1#2%
+  \else%
+    \headerstarttrue%
+    #2%
+  \fi%
+}
+\newcommand*{\makecvtitle}{%
+  {%
+    \ifhtml\else\@open{head}{}\fi%
+    % name (title is not visible)
+    {\namefont\@firstname~\@familyname}\\%
+    % detailed information
+    \addressfont\color{color2}%
+    \ifthenelse{\equal{}{\@mobile}}{}{\addtomaketitle[]{\mobilesymbol\@mobile}}%
+    \ifthenelse{\equal{}{\@phone}}{}{\addtomaketitle{\phonesymbol\@phone}}%
+    \ifthenelse{\equal{}{\@fax}}{}{\addtomaketitle{\faxsymbol\@fax}}%
+    \ifthenelse{\equal{}{\@email}}{}{\addtomaketitle{\emailsymbol\emaillink{\@email}}}%
+    \ifthenelse{\equal{}{\@homepage}}{}{\addtomaketitle{\homepagesymbol\httplink{\@homepage}}}%
+    \ifthenelse{\equal{}{\@extrainfo}}{}{\addtomaketitle{\@extrainfo}}%
+    \ifhtml\else\@close{head}\fi%
+    }\\}% need to force a \par after this to avoid weird spacing bug at the first section if no blank line is left after \maketitle
+
+% fonts
+\newcommand*{\namefont}{\Huge\bfseries\upshape}
+\newcommand*{\addressfont}{\small\mdseries\upshape}
+
+% lengths
+\newlength{\quotewidth}
+\renewcommand{\@footer}{}
+
+% CSS styles
+\newstyle{:root}{width:75\%;margin:auto;font-size:12pt;font-family:sans-serif;}
+\newstyle{.li-itemize}{margin:0.4ex 0ex;}
+\newstyle{.tex sub, .latex sub}{vertical-align: -0.5ex;margin-left: -0.1667em;margin-right: -0.125em;}
+\newstyle{.tex, .latex, .tex sub, .latex sub}{font-size: 1em;}
+\newstyle{.latex sup}{font-size: 0.85em;vertical-align: 0.15em;margin-left: -0.36em;margin-right: -0.15em;}
+\newstyle{ul}{list-style:none;padding-left:1.2em;margin-top:1em;margin-bottom:1em;}
+\newstyle{li}{padding-top:0pt;padding-bottom:0pt;margin-top:0pt;margin-bottom:0pt;line-height:1em;}
+\newstyle{li:before}{content:"\bullet";display:block;position:relative;max-width:0px;max-height:0px;left:-.8em;top:-0em;color:\@getstylecolor{color1};}
+\newstyle{li li:before}{content:"\cdot\cdot\cdot";display:block;position:relative;max-width:0px;max-height:0px;left:-1em;top:-0em;color:\@getstylecolor{color1};}
+\newstyle{h2}{position:relative;left:-64pt;color:\@getstylecolor{color1};}
+\newstyle{h3}{position:relative;left:-48pt;color:\@getstylecolor{color3};}
+\newstyle{.lbox2}{min-width:64pt;min-height:4pt;background:\@getstylecolor{color1};display:inline-block;position:relative;left:-2pt;border-left:2pt solid \@getstylecolor{color1};border-top-left-radius:2pt;border-bottom-left-radius:2pt;}
+\newstyle{.lbox3}{min-width:48pt;min-height:4pt;background:\@getstylecolor{color3};display:inline-block;position:relative;left:-2pt;border-left:2pt solid \@getstylecolor{color3};border-top-left-radius:2pt;border-bottom-left-radius:2pt;}
+\newstyle{.cventry}{margin-top:1.25em;margin-bottom:.5em};
