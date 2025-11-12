@@ -19,8 +19,8 @@ These guidelines serve as "design tokens" for creating an Applicant Tracking Sys
     *   *Detail*: Some ATS might not read information placed in document headers or footers. To guarantee your name and contact details are captured, ensure they are part of the main text flow, typically at the very top of the document.
     *   *Example*:
         ```
-        John Doe
-        (123) 456-7890 | john.doe@email.com | LinkedIn.com/in/johndoe
+        Dương Bảo Duy
+        baoduy.duong0206@gmail.com | https://github.com/bdx0 | https://bdx0.io.vn
         ```
 
 *   **`spacing-consistency`**: `standard`
@@ -72,8 +72,8 @@ These guidelines serve as "design tokens" for creating an Applicant Tracking Sys
     *   *Detail*: Consistency helps ATS accurately extract employment and education timelines. Placing dates clearly with their associated entries prevents confusion.
     *   *Example*:
         ```
-        Company Name, City, State | Role Title | January 2020 – Present
-        University Name, City, State | Degree, Major | 09/2016 – 05/2020
+        Rever Corp, City, Country | Senior Software Engineer | 06/2019 – 12/2022
+        Ho Chi Minh University of Science, City, Country | Bachelor in Mathematics & Computer Science | Sept 2007 – May 2013
         ```
 
 *   **`keyword-integration`**: `natural`
@@ -106,12 +106,12 @@ These guidelines serve as "design tokens" for creating an Applicant Tracking Sys
 *   **`language-clarity`**: `concise-direct`
     *   *Description*: **Use clear, concise, and direct language.**
     *   *Detail*: Get straight to the point. Avoid jargon where simpler terms suffice, but use industry-specific terminology when it's a keyword from the job description.
-    *   *Example*: Instead of "Was responsible for the oversight of various departmental initiatives," write "Managed departmental initiatives."
+    *   *Example*: Instead of "I want bridging the gap between technology and human interaction. I will make the software more simpler, more better," write "Passionate about bridging the gap between technology and human interaction to create simpler, better software."
 
 *   **`action-verbs`**: `strong-impactful`
     *   *Description*: **Start bullet points with strong action verbs.**
     *   *Detail*: Action verbs (e.g., "Developed," "Managed," "Implemented," "Achieved") make your accomplishments sound more dynamic and impactful.
-    *   *Example*: "Developed a new client onboarding process that reduced setup time by 15%."
+    *   *Example*: "Developed mobile app using Flutter."
 
 *   **`proofreading-standard`**: `error-free`
     *   *Description*: **Thoroughly proofread for any spelling, grammar, or punctuation errors.**
