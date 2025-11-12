@@ -3,175 +3,13 @@
 
 <head>
     <title>Bao Duy's Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            font-size: 12pt;
-            /* ATS-friendly body font size, slightly increased for readability */
-            color: #000;
-            /* ATS-friendly text color */
-            background-color: #fff;
-            /* ATS-friendly background color */
-        }
-
-        h1 {
-            color: #000;
-            /* ATS-friendly heading color */
-            font-size: 22pt;
-            /* Increased for better visual hierarchy */
-            font-weight: bold;
-            margin-top: 20px; /* Added margin-top */
-        }
-
-        h2 {
-            color: #000;
-            font-size: 18pt;
-            /* Increased for better visual hierarchy */
-            font-weight: bold;
-        }
-
-        h3 {
-            color: #000;
-            font-size: 16pt;
-            /* Increased for better visual hierarchy */
-            font-weight: bold;
-        }
-
-        #markdown-container {
-            max-width: 800px;
-            /* Limit line length for better readability */
-            margin: 0 auto;
-            /* Center the content */
-        }
-
-        ul {
-            list-style-type: disc;
-            /* ATS-friendly bullet style */
-            padding-left: 20px;
-            /* Ensure bullets are visible */
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000;
-            /* ATS-friendly link color (black) */
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .download-button {
-            display: inline-flex;
-            align-items: center;
-            padding: 8px 15px;
-            margin-left: 10px;
-            background-color: #007bff;
-            /* A nice blue */
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12pt;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-button:hover {
-            background-color: #0056b3;
-            /* Darker blue on hover */
-            text-decoration: none;
-        }
-
-        .download-button svg {
-            margin-right: 8px;
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-            /* Ensures the SVG icon color matches the text color */
-        }
-
-        #markdown-selector {
-            padding: 8px 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 12pt;
-            background-color: #f8f8f8;
-            cursor: pointer;
-            height: 40px;
-            /* Match height with the button */
-            appearance: none;
-            /* Remove default system styling */
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.9L159.3%2C69.2c-3.7-3.7-9.7-3.7-13.4%2C0L5.4%2C197.9c-3.7%2C3.7-3.7%2C9.7%2C0%2C13.4l13.4%2C13.4c3.9%2C3.9%2C10.1%2C3.9%2C14%2C0l116.8-116.8l116.8%2C116.8c3.9%2C3.9%2C10.1%2C3.9%2C14%2C0l13.4-13.4C290.7%2C207.6%2C290.7%2C201.6%2C287%2C197.9z%22%2F%3E%3C%2Fsvg%3E');
-            /* Custom arrow */
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-            background-size: 12px;
-            padding-right: 30px;
-            /* Make space for the arrow */
-        }
-
-        #markdown-selector:focus {
-            border-color: #007bff;
-            outline: none;
-        }
-
-        #floating-settings-menu {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #settings-toggle-button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            align-self: flex-end;
-            /* Position button to the right within the flex container */
-        }
-
-        #settings-toggle-button svg {
-            width: 24px;
-            height: 24px;
-            fill: #fff;
-        }
-
-        #settings-content {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        /* Adjust margin for download button inside the floating menu */
-        #floating-settings-menu .download-button {
-            margin-left: 0;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <!-- Include marked.js for Markdown parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- Include Prism.js for code highlighting -->
@@ -185,12 +23,39 @@
     <div id="floating-settings-menu">
         <button id="settings-toggle-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                    d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.09-.76-1.71-1.06l-.35-2.5c-.05-.24-.24-.41-.48-.41h-4c-.24 0-.43.17-.48.41l-.35 2.5c-.62.3-1.19.66-1.71 1.06l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.64-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.09.76 1.71 1.06l.35 2.5c.05.24.24.41.48.41h4c.24 0 .43-.17.48-.41l.35-2.5c.62-.3 1.19-.66 1.71-1.06l2.49 1c.22.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
             </svg>
         </button>
-        <div id="settings-content" style="display: none;">
+        <div id="settings-content">
+            <label for="font-select">Font:</label>
+            <select id="font-select">
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="Calibri, sans-serif">Calibri</option>
+                <option value="Helvetica, sans-serif">Helvetica</option>
+                <option value="Verdana, sans-serif">Verdana</option>
+                <option value="Montserrat, sans-serif">Montserrat</option>
+                <option value="Tahoma, sans-serif">Tahoma</option>
+                <option value="Aptos, sans-serif">Aptos</option>
+                <option value="Roboto, sans-serif" selected>Roboto</option>
+                <option value="Open Sans, sans-serif">Open Sans</option>
+                <option value="Lato, sans-serif">Lato</option>
+                <option value="Raleway, sans-serif">Raleway</option>
+                <option value="Jetbrains Mono, monospace">Jetbrains Mono</option>
+                <option value="Hasklig, monospace">Hasklig</option>
+                <option value="Tektur, sans-serif">Tektur</option>
+                <option value="Cambria, serif">Cambria</option>
+                <option value="Georgia, serif">Georgia</option>
+                <option value="Times New Roman, serif">Times New Roman</option>
+                <option value="Garamond, serif">Garamond</option>
+                <option value="Palatino, serif">Palatino</option>
+            </select>
+            <label for="language-select">Language:</label>
+            <select id="language-select">
+                <option value="en" selected>English</option>
+                <option value="vi">Tiếng Việt</option>
+            </select>
+            <label for="markdown-selector">CV Type:</label>
             <select id="markdown-selector">
                 <option value="cv_fullstack_developer.md" selected>Fullstack Developer CV</option>
                 <option value="cv_mobile_developer.md">Mobile Developer CV</option>
@@ -238,37 +103,216 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            const selector = document.getElementById('markdown-selector');
+            const markdownSelector = document.getElementById('markdown-selector');
+            const fontSelect = document.getElementById('font-select');
+            const languageSelect = document.getElementById('language-select'); // Get reference to language selector
             const pdfDownloadLink = document.getElementById('pdf-download-link');
+            const bodyElement = document.body; // Reference to the body element
 
-            function updatePdfDownloadLink(markdownFilename) {
-                const pdfFilename = markdownFilename.replace('.md', '.pdf');
+            // Function to get the language-specific filename
+            function getLanguageFilename(baseFilename, lang) {
+                if (lang === 'en') {
+                    return baseFilename.replace('.md', '_en.md');
+                } else if (lang === 'vi') {
+                    return baseFilename.replace('.md', '_vi.md');
+                }
+                return baseFilename; // Fallback to original if no language or unknown language
+            }
+
+            async function loadAndRenderMarkdown(baseFilename, lang) {
+                const filename = getLanguageFilename(baseFilename, lang);
+                try {
+                    document.getElementById('markdown-container').innerHTML = 'Loading ' + filename + '...';
+                    const response = await fetch(filename);
+                    if (!response.ok) {
+                        // If language-specific file not found, try fallback to base filename
+                        if (filename !== baseFilename) {
+                            console.warn(`Language-specific file ${filename} not found, trying ${baseFilename}`);
+                            const fallbackResponse = await fetch(baseFilename);
+                            if (!fallbackResponse.ok) {
+                                throw new Error(`HTTP error! status: ${fallbackResponse.status} for both ${filename} and ${baseFilename}`);
+                            }
+                            const markdown = await fallbackResponse.text();
+                            const html = await renderMarkdown(markdown);
+                            document.getElementById('markdown-container').innerHTML = html;
+                            return;
+                        }
+                        throw new Error(`HTTP error! status: ${response.status} for ${filename}`);
+                    }
+                    const markdown = await response.text();
+                    const html = await renderMarkdown(markdown);
+                    document.getElementById('markdown-container').innerHTML = html;
+                } catch (error) {
+                    console.error('Error loading or rendering markdown:', error);
+                    document.getElementById('markdown-container').innerHTML = '<p style="color: red;">Failed to load ' + filename + '.</p>';
+                }
+            }
+
+            function updatePdfDownloadLink(markdownFilename, lang) {
+                const pdfFilename = getLanguageFilename(markdownFilename, lang).replace('.md', '.pdf');
                 pdfDownloadLink.href = pdfFilename;
                 pdfDownloadLink.download = pdfFilename;
             }
 
-            selector.addEventListener('change', (event) => {
+            markdownSelector.addEventListener('change', (event) => {
                 const selectedMarkdown = event.target.value;
-                loadAndRenderMarkdown(selectedMarkdown);
-                updatePdfDownloadLink(selectedMarkdown);
+                const selectedLanguage = languageSelect.value;
+                loadAndRenderMarkdown(selectedMarkdown, selectedLanguage);
+                updatePdfDownloadLink(selectedMarkdown, selectedLanguage);
             });
 
+            fontSelect.addEventListener('change', (event) => {
+                bodyElement.style.fontFamily = event.target.value;
+            });
+
+            languageSelect.addEventListener('change', (event) => {
+                const selectedLanguage = event.target.value;
+                localStorage.setItem('selectedLanguage', selectedLanguage); // Store language preference
+                const selectedMarkdown = markdownSelector.value;
+                loadAndRenderMarkdown(selectedMarkdown, selectedLanguage);
+                updatePdfDownloadLink(selectedMarkdown, selectedLanguage);
+            });
+
+            // Initialize language from localStorage or default to 'en'
+            const storedLanguage = localStorage.getItem('selectedLanguage');
+            if (storedLanguage) {
+                languageSelect.value = storedLanguage;
+            } else {
+                languageSelect.value = 'en'; // Default language
+            }
+
             // Load the initially selected markdown file and update PDF link
-            const initialMarkdown = selector.value;
-            loadAndRenderMarkdown(initialMarkdown);
-            updatePdfDownloadLink(initialMarkdown);
+            const initialMarkdown = markdownSelector.value;
+            const initialLanguage = languageSelect.value;
+            loadAndRenderMarkdown(initialMarkdown, initialLanguage);
+            updatePdfDownloadLink(initialMarkdown, initialLanguage);
+
+            // Set initial font based on the default selected option
+            bodyElement.style.fontFamily = fontSelect.value;
 
             // Floating settings menu toggle
             const settingsToggleButton = document.getElementById('settings-toggle-button');
-            const settingsContent = document.getElementById('settings-content');
+            const floatingSettingsMenu = document.getElementById('floating-settings-menu'); // Get reference to the parent menu element
+
+            let hasDragged = false; // Flag to track if the menu has been dragged
 
             settingsToggleButton.addEventListener('click', () => {
-                if (settingsContent.style.display === 'none') {
-                    settingsContent.style.display = 'flex';
-                } else {
-                    settingsContent.style.display = 'none';
+                // Only toggle if the menu was not dragged and is not currently being dragged
+                if (!isDragging && !hasDragged) {
+                    floatingSettingsMenu.classList.toggle('collapsed'); // Toggle the 'collapsed' class
+
+                    // After toggling, check if the menu is now expanded and adjust position if needed
+                    if (!floatingSettingsMenu.classList.contains('collapsed')) {
+                        // Wait a tick for potential DOM updates if any (though unlikely needed here)
+                        requestAnimationFrame(() => {
+                            const menuRect = settingsMenu.getBoundingClientRect();
+                            const viewportWidth = window.innerWidth;
+                            const menuWidth = menuRect.width;
+                            const menuLeft = menuRect.left;
+
+                            // Calculate the right edge of the menu
+                            const menuRightEdge = menuLeft + menuWidth;
+
+                            // If the right edge exceeds the viewport, adjust the left position
+                            if (menuRightEdge > viewportWidth) {
+                                // Calculate how much it overflows
+                                const overflowX = menuRightEdge - viewportWidth;
+                                // Adjust left position to bring it back within bounds
+                                settingsMenu.style.left = `${menuLeft - overflowX}px`;
+                            }
+
+                            // Ensure left edge is not off-screen (should be handled by drag constraints, but good for safety)
+                            if (menuRect.left < 0) {
+                                settingsMenu.style.left = '0px';
+                            }
+                        });
+                    }
                 }
             });
+
+            // Drag and drop functionality for the floating settings menu
+            const settingsMenu = document.getElementById('floating-settings-menu');
+            const settingsToggleButtonForDrag = document.getElementById('settings-toggle-button'); // Use the button as the drag handle
+
+            let isDragging = false;
+            let offsetX, offsetY;
+            let currentX, currentY;
+
+            // Function to handle touch events as well
+            function getEventXY(event) {
+                if (event.type.startsWith('touch')) {
+                    return {
+                        x: event.touches[0].clientX,
+                        y: event.touches[0].clientY
+                    };
+                } else {
+                    return {
+                        x: event.clientX,
+                        y: event.clientY
+                    };
+                }
+            }
+
+            settingsToggleButtonForDrag.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                hasDragged = false; // Reset drag flag on mousedown
+                const menuRect = settingsMenu.getBoundingClientRect();
+                const eventXY = getEventXY(e);
+                currentX = menuRect.left;
+                currentY = menuRect.top;
+                offsetX = eventXY.x - currentX;
+                offsetY = eventXY.y - currentY;
+
+                // Add event listeners to the document to capture mousemove and mouseup globally
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+                // Add touch event listeners
+                document.addEventListener('touchmove', onMouseMove);
+                document.addEventListener('touchend', onMouseUp);
+            });
+
+            function onMouseMove(event) {
+                if (!isDragging) return;
+
+                hasDragged = true; // Set flag if movement occurs
+
+                const eventXY = getEventXY(event);
+                currentX = eventXY.x - offsetX;
+                currentY = eventXY.y - offsetY;
+
+                // Get viewport dimensions
+                const viewportWidth = window.innerWidth;
+                const viewportHeight = window.innerHeight;
+
+                // Get menu dimensions
+                const menuWidth = settingsMenu.offsetWidth;
+                const menuHeight = settingsMenu.offsetHeight;
+
+                // Calculate boundaries
+                const minX = 0;
+                const maxX = viewportWidth - menuWidth;
+                const minY = 0;
+                const maxY = viewportHeight - menuHeight;
+
+                // Clamp position to stay within viewport
+                currentX = Math.max(minX, Math.min(currentX, maxX));
+                currentY = Math.max(minY, Math.min(currentY, maxY));
+
+                // Update element's position
+                settingsMenu.style.left = `${currentX}px`;
+                settingsMenu.style.top = `${currentY}px`;
+                settingsMenu.style.right = 'auto'; // Ensure right is not interfering
+                settingsMenu.style.bottom = 'auto'; // Ensure bottom is not interfering
+            }
+
+            function onMouseUp() {
+                isDragging = false;
+                // Remove event listeners
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+                document.removeEventListener('touchmove', onMouseMove);
+                document.removeEventListener('touchend', onMouseUp);
+            }
         });
     </script>
 </body>
