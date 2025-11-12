@@ -2,19 +2,13 @@
 
 **Mobile Developer**
 
----
-
 ## Contact Information
 *   **Email:** baoduy.duong0206@gmail.com
 *   **GitHub:** https://github.com/bdx0
 *   **Website:** https://bdx0.io.vn
 
----
-
 ## Summary
 Highly skilled and experienced Software Engineer with 9 years of expertise, specializing in mobile application development. Proven track record in optimizing application performance, driving innovative solutions, and bridging the gap between technology and human interaction. Proficient in Flutter, Android, iOS, and various mobile-centric technologies, with a strong focus on creating user-friendly and high-performing mobile experiences.
-
----
 
 ## Skills
 
@@ -38,9 +32,13 @@ Highly skilled and experienced Software Engineer with 9 years of expertise, spec
 ### Languages
 *   English (Working Proficiency), Japanese (Basic)
 
----
-
 ## Work Experience
+
+**Freelance Fullstack Developer & AI Researcher** | Home | 12/2022 – Present
+*   Designed and deployed a home lab with QEMU, libvirt, and Kubernetes for fullstack application development.
+*   Built and tested APIs and web applications in isolated environments, integrating IoT components.
+*   Gained hands-on experience with DevOps workflows and Linux server environments.
+*   Engaged in AI research, including fine-tuning Whisper models and porting llama.c to iPhone.
 
 **Senior Software Engineer** | Rever Corp | 06/2019 – 12/2022
 *   Developed mobile applications using Flutter, enhancing user experience and functionality.
@@ -54,18 +52,10 @@ Highly skilled and experienced Software Engineer with 9 years of expertise, spec
 *   Designed and developed a call quality analysis system for monitoring and improving communication metrics.
 *   Contributed to iOS mobile app development with C/Objective-C, delivering robust application features.
 
-**Mobile Developer** | BraveSoft Corp | 05/2013 – 07/2014
+**Mobile Developer** | Brave Corp | 05/2013 – 07/2014
 *   Developed various Android and iOS applications for clients, focusing on diverse functional requirements.
 *   Utilized Android NDK to write low-level code, enhancing and modifying FFmpeg's functionality on Android.
 *   Developed an FFmpeg wrapper for advanced video processing tasks, including cropping, background insertion, and video merging.
-
-**Freelance Fullstack Developer & AI Researcher** | Home | 12/2022 – Present
-*   Designed and deployed a home lab with QEMU, libvirt, and Kubernetes for fullstack application development.
-*   Built and tested APIs and web applications in isolated environments, integrating IoT components.
-*   Gained hands-on experience with DevOps workflows and Linux server environments.
-*   Engaged in AI research, including fine-tuning Whisper models and porting llama.c to iPhone.
-
----
 
 ## Projects
 
@@ -79,20 +69,14 @@ Highly skilled and experienced Software Engineer with 9 years of expertise, spec
 **ZaloStats** | VNG Corp | 08/2014 – 05/2019
 *   Designed and developed an analysis system to measure and assess call quality, including Python and C/Java/Objective-C components.
 
----
-
 ## Education
 
 **Bachelor in Mathematics & Computer Science** | Ho Chi Minh University of Science | Sept 2007 – May 2013
 *   GPA: 6.5/10
 
----
-
 ## Awards
 
 *   CCNA certified by Trung Tam Tin Hoc DHKHTN
-
----
 
 ## Other Information
 

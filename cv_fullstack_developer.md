@@ -2,19 +2,13 @@
 
 **Fullstack Developer**
 
----
-
 ## Contact Information
 *   **Email:** baoduy.duong0206@gmail.com
 *   **GitHub:** https://github.com/bdx0
 *   **Website:** https://bdx0.io.vn
 
----
-
 ## Summary
 Highly accomplished Software Engineer with 9 years of extensive experience in fullstack development, spanning frontend, backend, and mobile applications. Proven expertise in optimizing application performance, designing scalable architectures, and driving innovative solutions across diverse technology stacks. Adept at leveraging modern frameworks, cloud-native technologies (Kubernetes), and AI/ML techniques to deliver robust and user-centric software. Passionate about bridging the gap between technology and human interaction to create simpler, better software.
-
----
 
 ## Skills
 
@@ -45,8 +39,6 @@ Highly accomplished Software Engineer with 9 years of extensive experience in fu
 ### Languages
 *   English (Working Proficiency), Japanese (Basic)
 
----
-
 ## Work Experience
 
 **Freelance Fullstack Developer & AI Researcher** | Home | 12/2022 – Present
@@ -71,8 +63,6 @@ Highly accomplished Software Engineer with 9 years of extensive experience in fu
 *   Utilized the Android NDK to implement low-level code for enhancing and modifying FFmpeg's functionality on Android.
 *   Developed an FFmpeg wrapper for advanced video processing, including cropping, background insertion, and video merging.
 
----
-
 ## Projects
 
 **Homelab** | Home | 10/2019 – Present
@@ -96,14 +86,10 @@ Highly accomplished Software Engineer with 9 years of extensive experience in fu
 **ZaloCall** | VNG Corp | 08/2014 – 05/2019
 *   Developed a mobile application on iOS using C/Objective-C, enabling robust video call functionality over the internet.
 
----
-
 ## Education
 
 **Bachelor in Mathematics & Computer Science** | Ho Chi Minh University of Science | Sept 2007 – May 2013
 *   GPA: 7.0/10
-
----
 
 ## Awards
 
