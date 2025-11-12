@@ -8,37 +8,49 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
-            font-size: 12pt; /* ATS-friendly body font size, slightly increased for readability */
-            color: #000; /* ATS-friendly text color */
-            background-color: #fff; /* ATS-friendly background color */
+            font-size: 12pt;
+            /* ATS-friendly body font size, slightly increased for readability */
+            color: #000;
+            /* ATS-friendly text color */
+            background-color: #fff;
+            /* ATS-friendly background color */
         }
 
         h1 {
-            color: #000; /* ATS-friendly heading color */
-            font-size: 22pt; /* Increased for better visual hierarchy */
+            color: #000;
+            /* ATS-friendly heading color */
+            font-size: 22pt;
+            /* Increased for better visual hierarchy */
             font-weight: bold;
+            margin-top: 20px; /* Added margin-top */
         }
 
         h2 {
             color: #000;
-            font-size: 18pt; /* Increased for better visual hierarchy */
+            font-size: 18pt;
+            /* Increased for better visual hierarchy */
             font-weight: bold;
         }
 
         h3 {
             color: #000;
-            font-size: 16pt; /* Increased for better visual hierarchy */
+            font-size: 16pt;
+            /* Increased for better visual hierarchy */
             font-weight: bold;
         }
 
         #markdown-container {
-            max-width: 800px; /* Limit line length for better readability */
-            margin: 0 auto; /* Center the content */
+            max-width: 800px;
+            /* Limit line length for better readability */
+            margin: 0 auto;
+            /* Center the content */
         }
 
         ul {
-            list-style-type: disc; /* ATS-friendly bullet style */
-            padding-left: 20px; /* Ensure bullets are visible */
+            list-style-type: disc;
+            /* ATS-friendly bullet style */
+            padding-left: 20px;
+            /* Ensure bullets are visible */
         }
 
         li {
@@ -47,7 +59,8 @@
 
         a {
             text-decoration: none;
-            color: #000; /* ATS-friendly link color (black) */
+            color: #000;
+            /* ATS-friendly link color (black) */
         }
 
         a:hover {
@@ -59,7 +72,8 @@
             align-items: center;
             padding: 8px 15px;
             margin-left: 10px;
-            background-color: #007bff; /* A nice blue */
+            background-color: #007bff;
+            /* A nice blue */
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -70,7 +84,8 @@
         }
 
         .download-button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #0056b3;
+            /* Darker blue on hover */
             text-decoration: none;
         }
 
@@ -78,7 +93,8 @@
             margin-right: 8px;
             width: 16px;
             height: 16px;
-            fill: currentColor; /* Ensures the SVG icon color matches the text color */
+            fill: currentColor;
+            /* Ensures the SVG icon color matches the text color */
         }
 
         #markdown-selector {
@@ -88,15 +104,19 @@
             font-size: 12pt;
             background-color: #f8f8f8;
             cursor: pointer;
-            height: 40px; /* Match height with the button */
-            appearance: none; /* Remove default system styling */
+            height: 40px;
+            /* Match height with the button */
+            appearance: none;
+            /* Remove default system styling */
             -webkit-appearance: none;
             -moz-appearance: none;
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.9L159.3%2C69.2c-3.7-3.7-9.7-3.7-13.4%2C0L5.4%2C197.9c-3.7%2C3.7-3.7%2C9.7%2C0%2C13.4l13.4%2C13.4c3.9%2C3.9%2C10.1%2C3.9%2C14%2C0l116.8-116.8l116.8%2C116.8c3.9%2C3.9%2C10.1%2C3.9%2C14%2C0l13.4-13.4C290.7%2C207.6%2C290.7%2C201.6%2C287%2C197.9z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.9L159.3%2C69.2c-3.7-3.7-9.7-3.7-13.4%2C0L5.4%2C197.9c-3.7%2C3.7-3.7%2C9.7%2C0%2C13.4l13.4%2C13.4c3.9%2C3.9%2C10.1%2C3.9%2C14%2C0l116.8-116.8l116.8%2C116.8c3.9%2C3.9%2C10.1%2C3.9%2C14%2C0l13.4-13.4C290.7%2C207.6%2C290.7%2C201.6%2C287%2C197.9z%22%2F%3E%3C%2Fsvg%3E');
+            /* Custom arrow */
             background-repeat: no-repeat;
             background-position: right 10px center;
             background-size: 12px;
-            padding-right: 30px; /* Make space for the arrow */
+            padding-right: 30px;
+            /* Make space for the arrow */
         }
 
         #markdown-selector:focus {
@@ -131,7 +151,8 @@
             justify-content: center;
             cursor: pointer;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            align-self: flex-end; /* Position button to the right within the flex container */
+            align-self: flex-end;
+            /* Position button to the right within the flex container */
         }
 
         #settings-toggle-button svg {
@@ -161,12 +182,12 @@
 </head>
 
 <body>
-    <h1>Welcome to Bao Duy's Resume Page</h1>
     <div id="floating-settings-menu">
         <button id="settings-toggle-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.09-.76-1.71-1.06l-.35-2.5c-.05-.24-.24-.41-.48-.41h-4c-.24 0-.43.17-.48.41l-.35 2.5c-.62.3-1.19.66-1.71 1.06l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.64-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.09.76 1.71 1.06l.35 2.5c.05.24.24.41.48.41h4c.24 0 .43-.17.48-.41l.35-2.5c.62-.3 1.19-.66 1.71-1.06l2.49 1c.22.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.09-.76-1.71-1.06l-.35-2.5c-.05-.24-.24-.41-.48-.41h-4c-.24 0-.43.17-.48.41l-.35 2.5c-.62.3-1.19.66-1.71 1.06l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.64-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.09.76 1.71 1.06l.35 2.5c.05.24.24.41.48.41h4c.24 0 .43-.17.48-.41l.35-2.5c.62-.3 1.19-.66 1.71-1.06l2.49 1c.22.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
             </svg>
         </button>
         <div id="settings-content" style="display: none;">
@@ -176,7 +197,7 @@
             </select>
             <a id="pdf-download-link" href="#" download class="download-button">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
                 </svg>
                 Download CV (PDF)
             </a>
