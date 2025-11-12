@@ -53,6 +53,33 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 15px;
+            margin-left: 10px;
+            background-color: #007bff; /* A nice blue */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12pt;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            text-decoration: none;
+        }
+
+        .download-button svg {
+            margin-right: 8px;
+            width: 16px;
+            height: 16px;
+            fill: currentColor; /* Ensures the SVG icon color matches the text color */
+        }
     </style>
     <!-- Include marked.js for Markdown parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -69,7 +96,12 @@
         <option value="cv_fullstack_developer.md" selected>Fullstack Developer CV</option>
         <option value="cv_mobile_developer.md">Mobile Developer CV</option>
     </select>
-    <a id="pdf-download-link" href="#" download style="margin-left: 10px;">Download PDF</a>
+    <a id="pdf-download-link" href="#" download class="download-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+        Download CV (PDF)
+    </a>
     <div id="markdown-container">Loading Markdown...</div>
 
     <script>
