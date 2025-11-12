@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#FD0000" d="M0 0H512V512H0z"/><path fill="#FF0" d="M256 179.5L209.7 313.7 100.3 200.5 256 179.5 411.7 200.5 302.3 313.7 256 179.5z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900"  height="600" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<rect width="30" height="20" fill="#da251d"/>
+<polygon points="15,4 11.47,14.85 20.71,8.15 9.29,8.15 18.53,14.85" fill="#ff0"/>
+</svg>
