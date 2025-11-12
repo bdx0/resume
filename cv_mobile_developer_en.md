@@ -1,6 +1,6 @@
 # Dương Bảo Duy
 
-baoduy.duy0206@gmail.com | https://github.com/bdx0 | https://bdx0.io.vn
+baoduy.duong0206@gmail.com | https://github.com/bdx0 | https://bdx0.io.vn
 
 ## Summary
 Highly skilled and experienced Software Engineer with 9 years of expertise, specializing in mobile application development. Proven track record in optimizing application performance, driving innovative solutions, and bridging the gap between technology and human interaction. Proficient in Flutter, Android, iOS, and various mobile-centric technologies, with a strong focus on creating user-friendly and high-performing mobile experiences.

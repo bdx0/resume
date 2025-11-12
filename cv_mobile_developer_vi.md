@@ -1,6 +1,6 @@
 # Dương Bảo Duy
 
-baoduy.duy0206@gmail.com | https://github.com/bdx0 | https://bdx0.io.vn
+baoduy.duong0206@gmail.com | https://github.com/bdx0 | https://bdx0.io.vn
 
 ## Tóm tắt
 Kỹ sư phần mềm có kỹ năng cao và kinh nghiệm với 9 năm chuyên môn, chuyên về phát triển ứng dụng di động. Hồ sơ đã được chứng minh trong việc tối ưu hóa hiệu suất ứng dụng, thúc đẩy các giải pháp sáng tạo và thu hẹp khoảng cách giữa công nghệ và tương tác của con người. Thành thạo Flutter, Android, iOS và các công nghệ tập trung vào di động khác, với trọng tâm mạnh mẽ vào việc tạo ra trải nghiệm di động thân thiện với người dùng và hiệu suất cao.

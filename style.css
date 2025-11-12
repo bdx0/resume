@@ -1,286 +1,252 @@
-html, body {
-            /* Hide scrollbar for Chrome, Safari and Opera */
-            -webkit-scrollbar {
-                display: none;
-            }
-
-            /* Hide scrollbar for IE, Edge and Firefox */
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-        body {
-            /* font-family: Arial, sans-serif; */ /* This will be overridden by JS */
-            line-height: 1.6;
-            /* margin: 20px; */
-            font-size: 12pt;
-            /* ATS-friendly body font size, slightly increased for readability */
-            color: #000;
-            /* ATS-friendly text color */
-            background-color: #fff;
-            /* ATS-friendly background color */
-        }
-
-        h1 {
-            color: #000;
-            /* ATS-friendly heading color */
-            font-size: 22pt;
-            /* Increased for better visual hierarchy */
-            font-weight: bold;
-        }
-
-        h2 {
-            color: #000;
-            font-size: 18pt;
-            /* Increased for better visual hierarchy */
-            font-weight: bold;
-            margin-top: 1.6em;
-            margin-bottom: 0px;
-            /* Added margin-top */
-        }
-
-        h3 {
-            color: #000;
-            font-size: 16pt;
-            /* Increased for better visual hierarchy */
-            font-weight: bold;
-        }
-
-        #markdown-container {
-            max-width: 800px;
-            /* Limit line length for better readability */
-            margin: 0 auto;
-            /* Center the content */
-        }
-
-        ul {
-            list-style-type: disc;
-            /* ATS-friendly bullet style */
-            padding-left: 20px;
-            /* Ensure bullets are visible */
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000;
-            /* ATS-friendly link color (black) */
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .download-button {
-            display: inline-flex;
-            align-items: center;
-            padding: 8px 15px;
-            margin-left: 10px;
-            background-color: #007bff;
-            /* A nice blue */
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12pt;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-button:hover {
-            background-color: #0056b3;
-            /* Darker blue on hover */
-            text-decoration: none;
-        }
-
-        .download-button svg {
-            margin-right: 8px;
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-            /* Ensures the SVG icon color matches the text color */
-        }
-
-        #markdown-selector, #font-select {
-            padding: 8px 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 12pt;
-            background-color: #f8f8f8;
-            cursor: pointer;
-            height: 40px;
-            /* Match height with the button */
-            appearance: none;
-            /* Remove default system styling */
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.9L159.3%2C69.2c-3.7-3.7-9.7-3.7-13.4%2C0L5.4%2C197.9c-3.7%2C3.7-3.7%2C9.7%2C0%2C13.4l13.4%2C13.4c3.9%2C3.9%2C10.1%2C3.9%2C14%2C0l116.8-116.8l116.8%2C116.8c3.9%2C3.9%2C10.1%2C3.9%2C14%2C0l13.4-13.4C290.7%2C207.6%2C290.7%2C201.6%2C287%2C197.9z%22%2F%3E%3C%2Fsvg%3E');
-            /* Custom arrow */
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-            background-size: 12px;
-            padding-right: 30px;
-            /* Make space for the arrow */
-        }
-
-        #markdown-selector:focus {
-            border-color: #007bff;
-            outline: none;
-        }
-
-        #floating-settings-menu {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #settings-toggle-button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            align-self: flex-end;
-            /* Position button to the right within the flex container */
-        }
-
-        #settings-toggle-button svg {
-            width: 24px;
-            height: 24px;
-            fill: #fff;
-        }
-
-        #settings-content {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        #floating-settings-menu.collapsed {
-            padding: 0; /* Remove padding when collapsed */
-            border: none; /* Remove border when collapsed */
-            box-shadow: none; /* Remove shadow when collapsed */
-        }
-
-        #floating-settings-menu.collapsed #settings-content {
-            display: none;
-        }
-
-                /* Adjust margin for download button inside the floating menu */
-
-                #floating-settings-menu .download-button {
-
-                    margin-left: 0;
-
-                }
-
-        
-
-                .language-selector {
-
-                    position: relative;
-
-                    cursor: pointer;
-
-                }
-
-        
-
-                .selected-language {
-
-                    display: flex;
-
-                    align-items: center;
-
-                    padding: 8px 15px;
-
-                    border: 1px solid #ccc;
-
-                    border-radius: 5px;
-
-                    background-color: #f8f8f8;
-
-                }
-
-        
-
-                .flag-icon {
-
-                    width: 20px;
-
-                    height: 15px;
-
-                    margin-right: 8px;
-
-                }
-
-        
-
-                .language-options {
-
-                    display: none;
-
-                    position: absolute;
-
-                    top: 100%;
-
-                    left: 0;
-
-                    width: 100%;
-
-                    border: 1px solid #ccc;
-
-                    border-top: none;
-
-                    border-radius: 0 0 5px 5px;
-
-                    background-color: #fff;
-
-                    list-style: none;
-
-                    padding: 0;
-
-                    margin: 0;
-
-                    z-index: 1;
-
-                }
-
-        
-
-                .language-options li {
-
-                    display: flex;
-
-                    align-items: center;
-
-                    padding: 8px 15px;
-
-                }
-
-        
-
-                .language-options li:hover {
-
-                    background-color: #f0f0f0;
-
-                }
-
-        
+html,
+body {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body {
+  /* font-family: Arial, sans-serif; */ /* This will be overridden by JS */
+  line-height: 1.6;
+  /* margin: 20px; */
+  font-size: 12pt;
+  /* ATS-friendly body font size, slightly increased for readability */
+  color: #000;
+  /* ATS-friendly text color */
+  background-color: #fff;
+  /* ATS-friendly background color */
+}
+
+h1 {
+  color: #000;
+  /* ATS-friendly heading color */
+  font-size: 22pt;
+  /* Increased for better visual hierarchy */
+  font-weight: bold;
+}
+
+h2 {
+  color: #000;
+  font-size: 18pt;
+  /* Increased for better visual hierarchy */
+  font-weight: bold;
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+  /* Added margin-top */
+}
+
+h3 {
+  color: #000;
+  font-size: 16pt;
+  /* Increased for better visual hierarchy */
+  font-weight: bold;
+}
+
+#markdown-container {
+  max-width: 900px;
+  /* Limit line length for better readability */
+  margin: 0 auto;
+  /* Center the content */
+}
+
+p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+ul {
+  list-style-type: disc;
+  /* ATS-friendly bullet style */
+  padding-left: 20px;
+  /* Ensure bullets are visible */
+  margin-block-start: 0em;
+  margin-block-end: 1.2em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  /* ATS-friendly link color (black) */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  margin-left: 10px;
+  background-color: #007bff;
+  /* A nice blue */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12pt;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+  text-decoration: none;
+}
+
+.download-button svg {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  /* Ensures the SVG icon color matches the text color */
+}
+
+#markdown-selector,
+#font-select {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12pt;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  height: 40px;
+  /* Match height with the button */
+  appearance: none;
+  /* Remove default system styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.9L159.3%2C69.2c-3.7-3.7-9.7-3.7-13.4%2C0L5.4%2C197.9c-3.7%2C3.7-3.7%2C9.7%2C0%2C13.4l13.4%2C13.4c3.9%2C3.9%2C10.1%2C3.9%2C14%2C0l116.8-116.8l116.8%2C116.8c3.9%2C3.9%2C10.1%2C3.9%2C14%2C0l13.4-13.4C290.7%2C207.6%2C290.7%2C201.6%2C287%2C197.9z%22%2F%3E%3C%2Fsvg%3E");
+  /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
+  /* Make space for the arrow */
+}
+
+#markdown-selector:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#floating-settings-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#settings-toggle-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  align-self: flex-end;
+  /* Position button to the right within the flex container */
+}
+
+#settings-toggle-button svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+#settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#floating-settings-menu.collapsed {
+  padding: 0; /* Remove padding when collapsed */
+  border: none; /* Remove border when collapsed */
+  box-shadow: none; /* Remove shadow when collapsed */
+}
+
+#floating-settings-menu.collapsed #settings-content {
+  display: none;
+}
+
+/* Adjust margin for download button inside the floating menu */
+
+#floating-settings-menu .download-button {
+  margin-left: 0;
+}
+
+.language-selector {
+  position: relative;
+  cursor: pointer;
+}
+
+.selected-language {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  margin-right: 8px;
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.language-options li {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+}
+
+.language-options li:hover {
+  background-color: #f0f0f0;
+}
+
+.separator {
+  border-left: 1px solid #ccc;
+  align-self: stretch;
+  margin: 0 15px;
+  min-height: 1.5em;
+}

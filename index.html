@@ -20,11 +20,12 @@
 </head>
 
 <body>
-    <div id="floating-settings-menu">
+    <div id="floating-settings-menu" class="collapsed">
         <button id="settings-toggle-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
             </svg>
         </button>
         <div id="settings-content">
@@ -37,7 +38,7 @@
                 <option value="Montserrat, sans-serif">Montserrat</option>
                 <option value="Tahoma, sans-serif">Tahoma</option>
                 <option value="Aptos, sans-serif">Aptos</option>
-                <option value="Roboto, sans-serif" selected>Roboto</option>
+                <option value="Roboto, sans-serif">Roboto</option>
                 <option value="Open Sans, sans-serif">Open Sans</option>
                 <option value="Lato, sans-serif">Lato</option>
                 <option value="Raleway, sans-serif">Raleway</option>
@@ -46,7 +47,7 @@
                 <option value="Tektur, sans-serif">Tektur</option>
                 <option value="Cambria, serif">Cambria</option>
                 <option value="Georgia, serif">Georgia</option>
-                <option value="Times New Roman, serif">Times New Roman</option>
+                <option value="Times New Roman, serif" selected>Times New Roman</option>
                 <option value="Garamond, serif">Garamond</option>
                 <option value="Palatino, serif">Palatino</option>
             </select>
@@ -81,7 +82,6 @@
         </div>
     </div>
     <div id="markdown-container">Loading Markdown...</div>
-
     <script>
         async function renderMarkdown(markdownContent) {
             // Configure marked.js to use GitHub Flavored Markdown
@@ -95,7 +95,18 @@
                     return code;
                 }
             });
-            return marked.parse(markdownContent);
+
+            // Replace '|' with a unique placeholder before marked.js processes it
+            const processedMarkdownForPlaceholder = markdownContent.replace(/ \| /g, ' <span class="separator"></span> ');
+            // const processedMarkdownForPlaceholder = markdownContent.replace(/ \| /g, '___SEPARATOR___');
+            // processedMarkdownForPlaceholder = processedMarkdownForPlaceholder.replace(/___SEPARATOR___/g, ' <span class="separator"></span> ');
+
+            let html = marked.parse(processedMarkdownForPlaceholder);
+
+            // // After marked.js, replace the placeholder with the actual separator span
+            // html = html.replace(/____SEPARATOR____/g, ' <span class="separator"></span> ');
+
+            return html;
         }
 
         async function loadAndRenderMarkdown(filename) {
