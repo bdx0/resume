@@ -32,16 +32,69 @@
             text-decoration: underline;
         }
     </style>
+    <!-- Include marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Include Prism.js for code highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
 </head>
 
 <body>
     <h1>Welcome to Bao Duy's Resume Page</h1>
-    <p>Here you can find my resumes:</p>
-    <ul>
-        <li><a href="BaoDuy.pdf">Bao Duy - General Resume (PDF)</a></li>
-        <li><a href="fullstack.pdf">Bao Duy - Fullstack Resume (PDF)</a></li>
-        <li><a href="mobile cv.md">Bao Duy - Mobile CV (Markdown)</a></li>
-    </ul>
+    <h2>Select and Render Markdown File</h2>
+    <select id="markdown-selector">
+        <option value="cv_fullstack_developer.md">Fullstack Developer CV</option>
+        <option value="cv_mobile_developer.md">Mobile Developer CV</option>
+        <option value="me.md">About Me</option>
+        <option value="mobile cv.md">Mobile CV</option>
+        <option value="ats_friendly_guidelines.md" selected>ATS Friendly Guidelines</option>
+    </select>
+    <div id="markdown-container">Loading Markdown...</div>
+
+    <script>
+        async function renderMarkdown(markdownContent) {
+            // Configure marked.js to use GitHub Flavored Markdown
+            marked.setOptions({
+                gfm: true,
+                breaks: true,
+                highlight: function (code, lang) {
+                    if (Prism.languages[lang]) {
+                        return Prism.highlight(code, Prism.languages[lang], lang);
+                    }
+                    return code;
+                }
+            });
+            return marked.parse(markdownContent);
+        }
+
+        async function loadAndRenderMarkdown(filename) {
+            try {
+                document.getElementById('markdown-container').innerHTML = 'Loading ' + filename + '...';
+                const response = await fetch(filename);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const markdown = await response.text();
+                const html = await renderMarkdown(markdown);
+                document.getElementById('markdown-container').innerHTML = html;
+            } catch (error) {
+                console.error('Error loading or rendering markdown:', error);
+                document.getElementById('markdown-container').innerHTML = '<p style="color: red;">Failed to load ' + filename + '.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const selector = document.getElementById('markdown-selector');
+            selector.addEventListener('change', (event) => {
+                loadAndRenderMarkdown(event.target.value);
+            });
+
+            // Load the initially selected markdown file
+            loadAndRenderMarkdown(selector.value);
+        });
+    </script>
 </body>
 
 </html>
