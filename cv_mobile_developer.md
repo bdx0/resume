@@ -1,36 +1,25 @@
 # Dương Bảo Duy
 
-**Mobile Developer**
-
-## Contact Information
-*   **Email:** baoduy.duong0206@gmail.com
-*   **GitHub:** https://github.com/bdx0
-*   **Website:** https://bdx0.io.vn
+baoduy.duong0206@gmail.com | https://github.com/bdx0 | https://bdx0.io.vn
 
 ## Summary
 Highly skilled and experienced Software Engineer with 9 years of expertise, specializing in mobile application development. Proven track record in optimizing application performance, driving innovative solutions, and bridging the gap between technology and human interaction. Proficient in Flutter, Android, iOS, and various mobile-centric technologies, with a strong focus on creating user-friendly and high-performing mobile experiences.
 
 ## Skills
 
-### Programming Languages
-*   **Mobile-focused:** Dart, Kotlin, Swift, Java, Objective-C, C/C++
-*   **Other:** Python, Javascript/Typescript, Go
+*   **Programming Languages**: Dart, Kotlin, Swift, Java, Objective-C, C/C++, Python, Javascript/Typescript, Go
 
-### Mobile Frameworks & Technologies
-*   Flutter, Android NDK, WebRTC, iOS Development, Next.js (Frontend)
+*   **Mobile Frameworks & Technologies**: Flutter, Android NDK, WebRTC, iOS Development, Next.js (Frontend)
 
-### Other Technical Skills
-*   **Backend:** Fastapi, Django, Gin, Springboot
-*   **Deep Learning:** Pandas, Numpy, Matplotlib, Pytorch, MLx, Tinygrad
-*   **Database:** PostgreSQL, Superbase, Baserow
-*   **Tools:** Git, VSCode, Bash
-*   **Platforms:** Linux
+*   **Backend**: Fastapi, Django, Gin, Springboot
+*   **Deep Learning**: Pandas, Numpy, Matplotlib, Pytorch, MLx, Tinygrad
+*   **Database**: PostgreSQL, Superbase, Baserow
+*   **Tools**: Git, VSCode, Bash
+*   **Platforms**: Linux
 
-### Soft Skills
-*   Critical Thinking, Problem-Solving, Time Management, GTD, Public Speaking, Self-motivation
+*   **Soft Skills**: Critical Thinking, Problem-Solving, Time Management, GTD, Public Speaking, Self-motivation
 
-### Languages
-*   English (Working Proficiency), Japanese (Basic)
+*   **Languages**: English (Working Proficiency), Japanese (Basic)
 
 ## Work Experience
 
@@ -40,19 +29,19 @@ Highly skilled and experienced Software Engineer with 9 years of expertise, spec
 *   Gained hands-on experience with DevOps workflows and Linux server environments.
 *   Engaged in AI research, including fine-tuning Whisper models and porting llama.c to iPhone.
 
-**Senior Software Engineer** | Rever Corp | 06/2019 – 12/2022
+**Senior Software Engineer** | Rever Corp, City, Country | 06/2019 – 12/2022
 *   Developed mobile applications using Flutter, enhancing user experience and functionality.
 *   Optimized app performance through code refactoring, improved database queries, and leveraging caching mechanisms.
 *   Implemented comprehensive unit tests and automated testing to ensure high code quality and reliability.
 *   Integrated REST APIs for dynamic data retrieval and seamless synchronization between server and mobile applications.
 *   Developed custom UI/UX solutions that significantly enhanced user engagement and satisfaction.
 
-**Senior Software Engineer** | VNG Corp | 08/2014 – 05/2019
+**Senior Software Engineer** | VNG Corp, City, Country | 08/2014 – 05/2019
 *   Developed a mobile video call feature utilizing WebRTC technology, enabling real-time communication.
 *   Designed and developed a call quality analysis system for monitoring and improving communication metrics.
 *   Contributed to iOS mobile app development with C/Objective-C, delivering robust application features.
 
-**Mobile Developer** | Brave Corp | 05/2013 – 07/2014
+**Mobile Developer** | Brave Corp, City, Country | 05/2013 – 07/2014
 *   Developed various Android and iOS applications for clients, focusing on diverse functional requirements.
 *   Utilized Android NDK to write low-level code, enhancing and modifying FFmpeg's functionality on Android.
 *   Developed an FFmpeg wrapper for advanced video processing tasks, including cropping, background insertion, and video merging.
@@ -71,7 +60,7 @@ Highly skilled and experienced Software Engineer with 9 years of expertise, spec
 
 ## Education
 
-**Bachelor in Mathematics & Computer Science** | Ho Chi Minh University of Science | Sept 2007 – May 2013
+**Bachelor in Mathematics & Computer Science** | Ho Chi Minh University of Science, City, Country | Sept 2007 – May 2013
 *   GPA: 6.5/10
 
 ## Awards
