@@ -51,10 +51,22 @@
                 <option value="Palatino, serif">Palatino</option>
             </select>
             <label for="language-select">Language:</label>
-            <select id="language-select">
-                <option value="en">English</option>
-                <option value="vi">Tiếng Việt</option>
-            </select>
+            <div class="language-selector">
+                <div class="selected-language">
+                    <img src="usa-flag.svg" alt="USA Flag" class="flag-icon">
+                    <span>English</span>
+                </div>
+                <ul class="language-options">
+                    <li data-lang="en">
+                        <img src="usa-flag.svg" alt="USA Flag" class="flag-icon">
+                        <span>English</span>
+                    </li>
+                    <li data-lang="vi">
+                        <img src="vietnam-flag.svg" alt="Vietnam Flag" class="flag-icon">
+                        <span>Tiếng Việt</span>
+                    </li>
+                </ul>
+            </div>
             <label for="markdown-selector">CV Type:</label>
             <select id="markdown-selector">
                 <option value="cv_fullstack_developer.md" selected>Fullstack Developer CV</option>
@@ -105,7 +117,9 @@
         document.addEventListener('DOMContentLoaded', () => {
             const markdownSelector = document.getElementById('markdown-selector');
             const fontSelect = document.getElementById('font-select');
-            const languageSelect = document.getElementById('language-select'); // Get reference to language selector
+            const languageSelector = document.querySelector('.language-selector');
+            const selectedLanguage = languageSelector.querySelector('.selected-language');
+            const languageOptions = languageSelector.querySelector('.language-options');
             const pdfDownloadLink = document.getElementById('pdf-download-link');
             const bodyElement = document.body; // Reference to the body element
 
@@ -156,7 +170,7 @@
 
             markdownSelector.addEventListener('change', (event) => {
                 const selectedMarkdown = event.target.value;
-                const selectedLanguage = languageSelect.value;
+                const selectedLanguage = languageSelector.dataset.lang;
                 loadAndRenderMarkdown(selectedMarkdown, selectedLanguage);
                 updatePdfDownloadLink(selectedMarkdown, selectedLanguage);
             });
@@ -165,25 +179,40 @@
                 bodyElement.style.fontFamily = event.target.value;
             });
 
-            languageSelect.addEventListener('change', (event) => {
-                const selectedLanguage = event.target.value;
-                localStorage.setItem('selectedLanguage', selectedLanguage); // Store language preference
-                const selectedMarkdown = markdownSelector.value;
-                loadAndRenderMarkdown(selectedMarkdown, selectedLanguage);
-                updatePdfDownloadLink(selectedMarkdown, selectedLanguage);
+            selectedLanguage.addEventListener('click', () => {
+                languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
             });
 
-            // Initialize language from localStorage or default to 'en'
-            const storedLanguage = localStorage.getItem('selectedLanguage');
-            if (storedLanguage) {
-                languageSelect.value = storedLanguage;
-            } else {
-                languageSelect.value = 'en'; // Default language
+            languageOptions.addEventListener('click', (event) => {
+                const target = event.target.closest('li');
+                if (target) {
+                    const selectedLang = target.dataset.lang;
+                    localStorage.setItem('selectedLanguage', selectedLang);
+                    updateLanguageSelector(selectedLang);
+                    const selectedMarkdown = markdownSelector.value;
+                    loadAndRenderMarkdown(selectedMarkdown, selectedLang);
+                    updatePdfDownloadLink(selectedMarkdown, selectedLang);
+                    languageOptions.style.display = 'none';
+                }
+            });
+
+            function updateLanguageSelector(lang) {
+                const option = languageOptions.querySelector(`li[data-lang="${lang}"]`);
+                const flag = option.querySelector('.flag-icon').cloneNode(true);
+                const text = option.querySelector('span').textContent;
+                selectedLanguage.innerHTML = '';
+                selectedLanguage.appendChild(flag);
+                selectedLanguage.appendChild(document.createTextNode(text));
+                languageSelector.dataset.lang = lang;
             }
+
+            // Initialize language from localStorage or default to 'en'
+            const storedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+            updateLanguageSelector(storedLanguage);
 
             // Load the initially selected markdown file and update PDF link
             const initialMarkdown = markdownSelector.value;
-            const initialLanguage = languageSelect.value;
+            const initialLanguage = languageSelector.dataset.lang;
             loadAndRenderMarkdown(initialMarkdown, initialLanguage);
             updatePdfDownloadLink(initialMarkdown, initialLanguage);
 

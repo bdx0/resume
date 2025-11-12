@@ -183,7 +183,104 @@ html, body {
             display: none;
         }
 
-        /* Adjust margin for download button inside the floating menu */
-        #floating-settings-menu .download-button {
-            margin-left: 0;
-        }
+                /* Adjust margin for download button inside the floating menu */
+
+                #floating-settings-menu .download-button {
+
+                    margin-left: 0;
+
+                }
+
+        
+
+                .language-selector {
+
+                    position: relative;
+
+                    cursor: pointer;
+
+                }
+
+        
+
+                .selected-language {
+
+                    display: flex;
+
+                    align-items: center;
+
+                    padding: 8px 15px;
+
+                    border: 1px solid #ccc;
+
+                    border-radius: 5px;
+
+                    background-color: #f8f8f8;
+
+                }
+
+        
+
+                .flag-icon {
+
+                    width: 20px;
+
+                    height: 15px;
+
+                    margin-right: 8px;
+
+                }
+
+        
+
+                .language-options {
+
+                    display: none;
+
+                    position: absolute;
+
+                    top: 100%;
+
+                    left: 0;
+
+                    width: 100%;
+
+                    border: 1px solid #ccc;
+
+                    border-top: none;
+
+                    border-radius: 0 0 5px 5px;
+
+                    background-color: #fff;
+
+                    list-style: none;
+
+                    padding: 0;
+
+                    margin: 0;
+
+                    z-index: 1;
+
+                }
+
+        
+
+                .language-options li {
+
+                    display: flex;
+
+                    align-items: center;
+
+                    padding: 8px 15px;
+
+                }
+
+        
+
+                .language-options li:hover {
+
+                    background-color: #f0f0f0;
+
+                }
+
+        
