@@ -5,26 +5,6 @@ baoduy.duong0206@gmail.com | https://github.com/bdx0 | https://bdx0.io.vn
 ## Summary
 Highly accomplished Software Engineer with 9 years of extensive experience in fullstack development, spanning frontend, backend, and mobile applications. Proven expertise in optimizing application performance, designing scalable architectures, and driving innovative solutions across diverse technology stacks. Adept at leveraging modern frameworks, cloud-native technologies (Kubernetes), and AI/ML techniques to deliver robust and user-centric software. Passionate about bridging the gap between technology and human interaction to create simpler, better software.
 
-## Skills
-
-*   **Programming Languages**: Python, Javascript/Typescript, Go, Java, C/C++, Dart, Kotlin, Swift
-
-*   **Frontend Frameworks**: Next.js, Flutter
-
-*   **Backend Frameworks**: Fastapi, Django, Gin, Springboot
-
-*   **Databases**: PostgreSQL, Superbase, Baserow
-
-*   **DevOps & Platforms**: Kubernetes, Linux, Git, Bash, QEMU, libvirt
-
-*   **AI/Machine Learning**: Pandas, Numpy, Matplotlib, Pytorch, MLx, Tinygrad
-
-*   **Other Technical Skills**: WebRTC, Android NDK, iOS Development, API Design & Integration
-
-*   **Soft Skills**: Critical Thinking, Problem-Solving, Time Management, GTD, Public Speaking, Self-motivation
-
-*   **Languages**: English (Working Proficiency), Japanese (Basic)
-
 ## Work Experience
 
 **Freelance Fullstack Developer & AI Researcher** | Home | 12/2022 – Present
@@ -77,6 +57,26 @@ Highly accomplished Software Engineer with 9 years of extensive experience in fu
 **Bachelor in Mathematics & Computer Science** | Ho Chi Minh University of Science, City, Country | Sept 2007 – May 2013
 *   GPA: 7.0/10
 
+## Skills
+
+*   **Programming Languages**: Python, Javascript/Typescript, Go, Java, C/C++, Dart, Kotlin, Swift
+
+*   **Frontend Frameworks**: Next.js, Flutter
+
+*   **Backend Frameworks**: Fastapi, Django, Gin, Springboot
+
+*   **Databases**: PostgreSQL, Superbase, Baserow
+
+*   **DevOps & Platforms**: Kubernetes, Linux, Git, Bash, QEMU, libvirt
+
+*   **AI/Machine Learning**: Pandas, Numpy, Matplotlib, Pytorch, MLx, Tinygrad
+
+*   **Other Technical Skills**: WebRTC, Android NDK, iOS Development, API Design & Integration
+
+*   **Soft Skills**: Critical Thinking, Problem-Solving, Time Management, GTD, Public Speaking, Self-motivation
+
+*   **Languages**: English (Working Proficiency), Japanese (Basic)
+                                                                                                                                              
 ## Awards
 
 *   CCNA certified by Trung Tam Tin Hoc DHKHTN
