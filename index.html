@@ -8,27 +8,32 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
-            font-size: 11pt; /* ATS-friendly body font size */
+            font-size: 12pt; /* ATS-friendly body font size, slightly increased for readability */
             color: #000; /* ATS-friendly text color */
             background-color: #fff; /* ATS-friendly background color */
         }
 
         h1 {
             color: #000; /* ATS-friendly heading color */
-            font-size: 18pt; /* Example for main title */
+            font-size: 22pt; /* Increased for better visual hierarchy */
             font-weight: bold;
         }
 
         h2 {
             color: #000;
-            font-size: 16pt; /* ATS-friendly section heading font size */
+            font-size: 18pt; /* Increased for better visual hierarchy */
             font-weight: bold;
         }
 
         h3 {
             color: #000;
-            font-size: 14pt; /* ATS-friendly sub-heading font size */
+            font-size: 16pt; /* Increased for better visual hierarchy */
             font-weight: bold;
+        }
+
+        #markdown-container {
+            max-width: 800px; /* Limit line length for better readability */
+            margin: 0 auto; /* Center the content */
         }
 
         ul {
@@ -64,6 +69,7 @@
         <option value="cv_fullstack_developer.md" selected>Fullstack Developer CV</option>
         <option value="cv_mobile_developer.md">Mobile Developer CV</option>
     </select>
+    <a id="pdf-download-link" href="#" download style="margin-left: 10px;">Download PDF</a>
     <div id="markdown-container">Loading Markdown...</div>
 
     <script>
@@ -100,12 +106,24 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const selector = document.getElementById('markdown-selector');
+            const pdfDownloadLink = document.getElementById('pdf-download-link');
+
+            function updatePdfDownloadLink(markdownFilename) {
+                const pdfFilename = markdownFilename.replace('.md', '.pdf');
+                pdfDownloadLink.href = pdfFilename;
+                pdfDownloadLink.download = pdfFilename;
+            }
+
             selector.addEventListener('change', (event) => {
-                loadAndRenderMarkdown(event.target.value);
+                const selectedMarkdown = event.target.value;
+                loadAndRenderMarkdown(selectedMarkdown);
+                updatePdfDownloadLink(selectedMarkdown);
             });
 
-            // Load the initially selected markdown file
-            loadAndRenderMarkdown(selector.value);
+            // Load the initially selected markdown file and update PDF link
+            const initialMarkdown = selector.value;
+            loadAndRenderMarkdown(initialMarkdown);
+            updatePdfDownloadLink(initialMarkdown);
         });
     </script>
 </body>

@@ -1,0 +1,41 @@
+name: Generate Resume PDFs
+
+on:
+  push:
+    branches:
+      - main # Trigger on pushes to the main branch
+
+jobs:
+  generate_pdfs:
+    runs-on: ubuntu-latest # Use an Ubuntu runner
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        # This token is required to push changes back to the repository
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Install Pandoc
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc
+
+    - name: Install TeX Live (for pdflatex)
+      run: |
+        # Install a minimal TeX Live distribution for pdflatex
+        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+
+    - name: Generate Fullstack CV PDF
+      run: pandoc cv_fullstack_developer.md -s --pdf-engine=pdflatex -o cv_fullstack_developer.pdf
+
+    - name: Generate Mobile CV PDF
+      run: pandoc cv_mobile_developer.md -s --pdf-engine=pdflatex -o cv_mobile_developer.pdf
+
+    - name: Commit and Push PDFs
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add *.pdf
+        git diff --staged --quiet || git commit -m "chore: Generate resume PDFs via GitHub Actions [skip ci]"
+        git push
