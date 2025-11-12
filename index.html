@@ -103,6 +103,53 @@
             border-color: #007bff;
             outline: none;
         }
+
+        #floating-settings-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #settings-toggle-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            align-self: flex-end; /* Position button to the right within the flex container */
+        }
+
+        #settings-toggle-button svg {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+
+        #settings-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Adjust margin for download button inside the floating menu */
+        #floating-settings-menu .download-button {
+            margin-left: 0;
+        }
     </style>
     <!-- Include marked.js for Markdown parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -115,16 +162,26 @@
 
 <body>
     <h1>Welcome to Bao Duy's Resume Page</h1>
-    <select id="markdown-selector">
-        <option value="cv_fullstack_developer.md" selected>Fullstack Developer CV</option>
-        <option value="cv_mobile_developer.md">Mobile Developer CV</option>
-    </select>
-    <a id="pdf-download-link" href="#" download class="download-button">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-        </svg>
-        Download CV (PDF)
-    </a>
+    <div id="floating-settings-menu">
+        <button id="settings-toggle-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.09-.76-1.71-1.06l-.35-2.5c-.05-.24-.24-.41-.48-.41h-4c-.24 0-.43.17-.48.41l-.35 2.5c-.62.3-1.19.66-1.71 1.06l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.12.22-.07.49.12.64l2.11 1.65c-.04.32-.07.64-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.09.76 1.71 1.06l.35 2.5c.05.24.24.41.48.41h4c.24 0 .43-.17.48-.41l.35-2.5c.62-.3 1.19-.66 1.71-1.06l2.49 1c.22.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+            </svg>
+        </button>
+        <div id="settings-content" style="display: none;">
+            <select id="markdown-selector">
+                <option value="cv_fullstack_developer.md" selected>Fullstack Developer CV</option>
+                <option value="cv_mobile_developer.md">Mobile Developer CV</option>
+            </select>
+            <a id="pdf-download-link" href="#" download class="download-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                Download CV (PDF)
+            </a>
+        </div>
+    </div>
     <div id="markdown-container">Loading Markdown...</div>
 
     <script>
@@ -179,6 +236,18 @@
             const initialMarkdown = selector.value;
             loadAndRenderMarkdown(initialMarkdown);
             updatePdfDownloadLink(initialMarkdown);
+
+            // Floating settings menu toggle
+            const settingsToggleButton = document.getElementById('settings-toggle-button');
+            const settingsContent = document.getElementById('settings-content');
+
+            settingsToggleButton.addEventListener('click', () => {
+                if (settingsContent.style.display === 'none') {
+                    settingsContent.style.display = 'flex';
+                } else {
+                    settingsContent.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>
