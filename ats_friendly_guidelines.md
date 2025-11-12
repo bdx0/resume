@@ -55,6 +55,11 @@ These guidelines serve as "design tokens" for creating an Applicant Tracking Sys
     *   *Detail*: Centered or right-aligned text can sometimes cause parsing issues with older ATS. Left-alignment is the safest bet.
     *   *Example*: Ensure all your bullet points and paragraphs start from the left margin.
 
+*   **`text-color`**: `black-on-white`
+    *   *Description*: **Use black text on a white background for all content.**
+    *   *Detail*: ATS primarily extracts text content and often ignores or strips away color. High contrast (black on white) ensures maximum readability for both ATS and human recruiters, regardless of display settings or printing. Avoid any other colors for text.
+    *   *Example*: All headings, body text, and contact information should be black.
+
 ## 3. Content & Formatting Tokens:
 
 *   **`section-headings`**: `[Work Experience, Education, Skills, Summary, Certifications, Projects, Awards]`
@@ -82,19 +87,24 @@ These guidelines serve as "design tokens" for creating an Applicant Tracking Sys
     *   *Example*: If a job description mentions "project management software" and "agile methodologies," ensure these terms appear in your work experience descriptions where applicable.
 
 *   **`avoid-graphics`**: `true`
-    *   *Description*: **Do not include images, charts, graphs, icons, or other visual elements.**
-    *   *Detail*: ATS cannot "read" images. Any information contained within a graphic will be lost. Graphics can also disrupt the parsing of text.
-    *   *Example*: Instead of an icon for "phone," just list your phone number.
+    *   *Description*: **Do not include images, charts, graphs, icons, or other visual elements, including profile pictures.**
+    *   *Detail*: ATS cannot "read" images. Any information contained within a graphic will be lost. Graphics can also disrupt the parsing of text. Profile pictures are a common non-compliance that can hinder parsing.
+    *   *Example*: Instead of an icon for "phone," just list your phone number. **Never include a profile picture.**
 
 *   **`avoid-tables`**: `true`
-    *   *Description*: **Do not use tables or text boxes, as these can often be misinterpreted by ATS.**
-    *   *Detail*: Similar to graphics, tables and text boxes can break the linear flow of text, causing ATS to misread or skip content.
-    *   *Example*: If you have a "Skills" section, list skills as bullet points or comma-separated text, not in a table.
+    *   *Description*: **Do not use tables, text boxes, or multi-column layouts for content, as these can often be misinterpreted by ATS.**
+    *   *Detail*: Similar to graphics, tables, text boxes, and complex multi-column structures can break the linear flow of text, causing ATS to misread or skip content. This is particularly problematic for sections like "Skills."
+    *   *Example*: If you have a "Skills" section, list skills as bullet points or comma-separated text, not in a table or a multi-column grid.
 
 *   **`avoid-special-characters`**: `true`
     *   *Description*: **Avoid unusual symbols, accented characters, or emojis that could be misinterpreted.**
     *   *Detail*: Stick to standard alphanumeric characters and common punctuation. Some special characters might not be encoded correctly by ATS.
     *   *Example*: Use "e.g." instead of "e.g." if your word processor auto-formats it with a special character.
+
+*   **`avoid-decorative-elements`**: `true`
+    *   *Description*: **Avoid decorative lines, borders, shading, or other non-essential visual elements.**
+    *   *Detail*: While seemingly minor, these elements can sometimes be misinterpreted by ATS as complex formatting, potentially leading to parsing errors or a less clean text extraction. Simplicity is key for optimal ATS compatibility.
+    *   *Example*: Do not use horizontal lines to separate sections; rely on spacing, bolding, and font size for visual hierarchy.
 
 *   **`file-format-preference`**: `[docx, pdf-ats-optimized]`
     *   *Description*: **Save your resume as a .docx file. If a PDF is required, ensure it is a truly ATS-optimized PDF.**
