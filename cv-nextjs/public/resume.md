@@ -86,7 +86,7 @@ I am a software engineer with 9 years of expertise in optimizing application per
 ## SKILLS SUMMARY
 
 ### Languages
-- Python, JavaScript, TypeScript, C/C++, Java, Objective-C, Dart, Go
+Python, JavaScript, TypeScript, C/C++, Java, Objective-C, Dart, Go
 
 ### Frameworks
 - **Frontend**: Next.js, Flutter
