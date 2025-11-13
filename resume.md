@@ -7,7 +7,7 @@ description: My professional resume detailing experience, education, and skills.
 
 **I am a software engineer**
 
-[baoduy.duong0206@gmail.com](email:baoduy.duong0206@gmail.com) | <i class="fa-brands fa-github"></i>:[bdx0](https://github.com/bdx0) | blog:[https://bdx0.github.io](https://bdx0.github.com)
+<i class="fa fa-envelope"></i> [baoduy.duong0206@gmail.com](email:baoduy.duong0206@gmail.com) | <i class="fa-brands fa-github"></i> [bdx0](https://github.com/bdx0) | <i class="fa-solid fa-blog"></i> [bdx0.github.io](https://bdx0.github.com)
 
 ## BIO
 I am a software engineer with 9 years of expertise in optimizing application performance and driving innovative solutions. I want bridging the gap between technology and human interaction. I will make the software more simpler, more better.
@@ -17,7 +17,7 @@ I am a software engineer with 9 years of expertise in optimizing application per
 
 ### Freelance Fullstack Developer
 **Home** | 12/2022 - Present
-- Designed and deployed a home lab using QEMU, libvirt, and Kubernetes to support fullstack application development and deployment. Built a tested APIs and web apps in isolated VMs and containers, hosted self-developed services on a local NAS, and integrated IoT components to simulate real-world backend scenarios.                                                                                       │
+- Designed and deployed a home lab using QEMU, libvirt, and Kubernetes to support fullstack application development and deployment. Built a tested APIs and web apps in isolated VMs and containers, hosted self-developed services on a local NAS, and integrated IoT components to simulate real-world backend scenarios.
 - Gained hands-on experience with DevOps workflows, Linux server environments, and self-hosted developer tools.
 
 ### Freelance AI Researcher
