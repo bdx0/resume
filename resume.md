@@ -7,7 +7,7 @@ description: My professional resume detailing experience, education, and skills.
 
 **I am a software engineer**
 
-[baoduy.duong0206@gmail.com](email:baoduy.duong0206@gmail.com) | [github:bdx0](https://github.com/bdx0) | [blog:https://bdx0.github.io](https://bdx0.github.com)
+[baoduy.duong0206@gmail.com](email:baoduy.duong0206@gmail.com) | <i class="fa-brands fa-github"></i>:[bdx0](https://github.com/bdx0) | blog:[https://bdx0.github.io](https://bdx0.github.com)
 
 ## BIO
 I am a software engineer with 9 years of expertise in optimizing application performance and driving innovative solutions. I want bridging the gap between technology and human interaction. I will make the software more simpler, more better.
