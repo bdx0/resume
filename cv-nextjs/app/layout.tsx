@@ -22,7 +22,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" />
       </head>
-      <body>{children}</body>
+      <body className="leading-relaxed text-base text-black bg-white">{children}</body>
     </html>
   );
 }

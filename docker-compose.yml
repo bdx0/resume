@@ -1,0 +1,25 @@
+services:
+  cv-nextjs:
+    build:
+      context: ./cv-nextjs
+      dockerfile: Dockerfile
+    image: dev
+    ports:
+      - "4001:3000"
+    environment:
+      - NODE_ENV=development
+    command: ["npm", "run", "dev"]
+    develop:
+      watch:
+        - path: ./cv-nextjs
+          action: sync
+          target: /app
+          ignore:
+            - node_modules/
+            - .next/
+            - Dockerfile
+        - path: ./cv-nextjs/Dockerfile
+          action: rebuild
+        - path: ./docker-compose.yml
+          action: rebuild
+    # command: npm run dev # This will be handled by justfile for flexibility

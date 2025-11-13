@@ -77,7 +77,7 @@ Highly skilled Software Engineer with 9 years of expertise in optimizing applica
 ## SKILLS
 
 ### Languages
-Python, JavaScript, TypeScript, C/C++, Java, Objective-C, Dart, Go
+- Python, JavaScript, TypeScript, C/C++, Java, Objective-C, Dart, Go
 
 ### Frameworks & Libraries
 - **Frontend**: Next.js, Flutter
