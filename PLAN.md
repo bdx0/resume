@@ -28,4 +28,4 @@ Convert the existing `index.html` to a Next.js application and update GitHub Act
 - Manually test PDF generation using the `generate-pdf.js` script locally.
 
 ### Task 3: Clean up (if necessary)
-- Remove original `index.html`, `style.css`, and other redundant files from the root directory once the Next.js migration is complete and verified.
+- Removed original `index.html`, `style.css`, and other redundant files from the root directory.
